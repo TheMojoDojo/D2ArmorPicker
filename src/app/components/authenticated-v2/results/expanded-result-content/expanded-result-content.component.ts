@@ -107,7 +107,7 @@ export class ExpandedResultContentComponent implements OnInit, OnDestroy {
       classItemFilters.push(ArmorPerkOrSlotDIMText[element.classItem || 0]);
     }
 
-    if (classItemFilters.length > 1) result += ` or (${classItemFilters.join(" ")})`;
+    result += ` or (${classItemFilters.join(" ")})`;
 
     return result;
   }
