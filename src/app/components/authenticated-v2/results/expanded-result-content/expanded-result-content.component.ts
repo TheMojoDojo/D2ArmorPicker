@@ -103,11 +103,8 @@ export class ExpandedResultContentComponent implements OnInit, OnDestroy {
     if (classItems.length > 0) {
       classItemFilters = [classItems];
     }
-    if (
-      element.classItem.perk != ArmorPerkOrSlot.None &&
-      element.classItem.perk != ArmorPerkOrSlot.COUNT
-    ) {
-      classItemFilters.push(ArmorPerkOrSlotDIMText[element.classItem.perk || 0]);
+    if (element.classItem != ArmorPerkOrSlot.None && element.classItem != ArmorPerkOrSlot.COUNT) {
+      classItemFilters.push(ArmorPerkOrSlotDIMText[element.classItem || 0]);
     }
 
     if (classItemFilters.length > 1) result += ` or (${classItemFilters.join(" ")})`;

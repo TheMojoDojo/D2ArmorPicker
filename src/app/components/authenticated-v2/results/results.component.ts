@@ -40,9 +40,7 @@ export interface ResultDefinition {
         hash: string;
       };
   artifice: number[];
-  classItem: {
-    perk: ArmorPerkOrSlot;
-  };
+  classItem: ArmorPerkOrSlot;
   mods: number[];
   stats: number[];
   statsNoMods: number[];
